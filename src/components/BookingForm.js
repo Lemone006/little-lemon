@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { submitAPI } from "../api";
 
 function BookingForm({
   availableTimes,
@@ -23,6 +24,7 @@ function BookingForm({
 
 
 function handleSubmit(e) {
+
   e.preventDefault();
 
   if (errors.date || errors.guests) {
@@ -36,9 +38,12 @@ function handleSubmit(e) {
     occasion
   };
 
-  console.log(formData);
+  const success = submitAPI(formData);
 
-  navigate("/confirmed");
+  if (success) {
+    navigate("/confirmed");
+  }
+
 }
 
   return (

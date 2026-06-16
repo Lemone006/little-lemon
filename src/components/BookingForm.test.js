@@ -20,3 +20,47 @@ test("Renders the BookingForm heading", () => {
 
   expect(headingElement).toBeInTheDocument();
 });
+
+test("Time options are rendered", () => {
+
+  render(
+    <BrowserRouter>
+      <BookingForm
+        availableTimes={[
+          "17:00",
+          "18:00",
+          "19:00"
+        ]}
+        dispatch={() => {}}
+      />
+    </BrowserRouter>
+  );
+
+  expect(
+    screen.getByText("17:00")
+  ).toBeInTheDocument();
+
+});
+
+test("Guests input is present", () => {
+
+  render(
+    <BrowserRouter>
+      <BookingForm
+        availableTimes={[
+          "17:00",
+          "18:00",
+          "19:00"
+        ]}
+        dispatch={() => {}}
+      />
+    </BrowserRouter>
+  );
+
+  expect(
+    screen.getByLabelText(
+      "Number of Guests"
+    )
+  ).toBeInTheDocument();
+
+});

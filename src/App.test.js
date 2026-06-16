@@ -18,10 +18,16 @@ test("initializeTimes returns the expected times", () => {
 
 });
 
+test("updateTimes returns the expected times when date changes", () => {
 
-test("updateTimes returns the same state", () => {
+  const state = [];
 
-  const state = [
+  const action = {
+    type: "dateChanged",
+    date: "2026-06-15"
+  };
+
+  const expectedTimes = [
     "17:00",
     "18:00",
     "19:00",
@@ -30,12 +36,8 @@ test("updateTimes returns the same state", () => {
     "22:00"
   ];
 
-  const action = {
-    type: "dateChanged"
-  };
-
   expect(
     updateTimes(state, action)
-  ).toEqual(state);
+  ).toEqual(expectedTimes);
 
 });
