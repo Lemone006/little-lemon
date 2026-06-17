@@ -1,63 +1,107 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+
+import {
+  FaFacebook,
+  FaInstagram,
+  FaXTwitter
+} from "react-icons/fa6";
+
 function Footer() {
   return (
     <footer className="footer">
 
       <div className="container footer-container">
 
+        {/* Logo and Description */}
+
         <div className="footer-column">
-          <h3>Little Lemon</h3>
+
+          <img
+            src={logo}
+            alt="Little Lemon Logo"
+            className="footer-logo"
+          />
 
           <p>
-            A family-owned Mediterranean restaurant
-            located in Chicago.
+            Fresh Mediterranean flavors served with passion.
           </p>
+
         </div>
+
+
+        {/* Navigation */}
 
         <div className="footer-column">
 
-          <h4>Navigation</h4>
+          <h3>Navigation</h3>
 
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
+
+            <li><Link to="/">Home</Link></li>
+
+            <li><Link to="/about">About</Link></li>
+
+            <li><Link to="/menu">Menu</Link></li>
+
+            <li><Link to="/reservations">Reservations</Link></li>
+
+            <li><Link to="/order-online">Order Online</Link></li>
+
           </ul>
 
         </div>
 
+
+        {/* Contact */}
+
         <div className="footer-column">
 
-          <h4>Contact</h4>
+          <h3>Contact</h3>
 
-          <p>info@littlelemon.com</p>
+          <ul>
 
-          <p>+1 (555) 123-4567</p>
+            <li>123 Main Street</li>
 
-          <p>Chicago, Illinois</p>
+            <li>Chicago, Illinois</li>
+
+            <li>+1 (312) 555-1234</li>
+
+            <li>info@littlelemon.com</li>
+
+          </ul>
 
         </div>
 
+
+        {/* Social Media */}
+
         <div className="footer-column">
 
-          <h4>Social Media</h4>
+          <h3>Social Media</h3>
 
-          <p>Facebook</p>
+          <div className="social-icons">
 
-          <p>Instagram</p>
+            <a href="/">
+              <FaFacebook />
+            </a>
 
-          <p>Twitter</p>
+            <a href="/">
+              <FaInstagram />
+            </a>
+
+            <a href="/">
+              <FaXTwitter />
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
       <div className="footer-bottom">
-
-        <p>
-          © 2026 Little Lemon. All Rights Reserved.
-        </p>
-
+        <p>© 2026 Little Lemon. All rights reserved.</p>
       </div>
 
     </footer>

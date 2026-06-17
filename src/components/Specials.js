@@ -1,5 +1,6 @@
 import Card from "./Card";
 import specialsData from "../data/specialsData";
+import { Link } from "react-router-dom";
 
 function Specials() {
   return (
@@ -11,9 +12,12 @@ function Specials() {
 
           <h2>This Week's Specials</h2>
 
-          <button className="primary-btn">
+          <Link
+            to="/menu"
+            className="primary-btn"
+          >
             Online Menu
-          </button>
+          </Link>
 
         </div>
 

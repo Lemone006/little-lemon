@@ -41,8 +41,15 @@ function handleSubmit(e) {
   const success = submitAPI(formData);
 
   if (success) {
-    navigate("/confirmed");
-  }
+
+  navigate(
+    "/confirmed",
+    {
+      state: formData
+    }
+  );
+
+}
 
 }
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Card({
   image,
   title,
@@ -26,9 +28,12 @@ function Card({
 
         <p>{description}</p>
 
-        <button className="secondary-btn">
+        <Link
+          to="/order-online"
+          className="secondary-btn"
+        >
           Order Online
-        </button>
+        </Link>
 
       </div>
 

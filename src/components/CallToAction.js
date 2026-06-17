@@ -1,4 +1,5 @@
 import heroImage from "../assets/restaurant-food.jpg";
+import { Link } from "react-router-dom";
 
 function CallToAction() {
   return (
@@ -15,9 +16,12 @@ function CallToAction() {
             focused on traditional recipes served with a modern twist.
           </p>
 
-          <button className="primary-btn">
+          <Link
+            to="/reservations"
+            className="primary-btn"
+          >
             Reserve a Table
-          </button>
+          </Link>
         </div>
 
         <div className="hero-image">

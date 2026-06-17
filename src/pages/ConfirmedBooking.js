@@ -1,16 +1,72 @@
+import { Link, useLocation } from "react-router-dom";
+
 function ConfirmedBooking() {
+
+  const location = useLocation();
+
+  const booking = location.state;
+
   return (
     <section className="confirmation-page">
+
       <div className="container">
 
-        <h1>Reservation Confirmed!</h1>
+        <div className="success-icon">
+          ✓
+        </div>
+
+        <h1>Booking Confirmed!</h1>
 
         <p>
-          Thank you for choosing Little Lemon.
-          We look forward to serving you.
+          Your reservation has been successfully submitted.
         </p>
 
+        {booking && (
+
+          <div className="booking-summary">
+
+            <h2>Reservation Details</h2>
+
+            <p>
+              <strong>Date:</strong> {booking.date}
+            </p>
+
+            <p>
+              <strong>Time:</strong> {booking.time}
+            </p>
+
+            <p>
+              <strong>Guests:</strong> {booking.guests}
+            </p>
+
+            <p>
+              <strong>Occasion:</strong> {booking.occasion}
+            </p>
+
+          </div>
+
+        )}
+
+        <div className="confirmation-buttons">
+
+          <Link
+            to="/"
+            className="secondary-btn"
+          >
+            Return Home
+          </Link>
+
+          <Link
+            to="/reservations"
+            className="primary-btn"
+          >
+            Book Another Table
+          </Link>
+
+        </div>
+
       </div>
+
     </section>
   );
 }
