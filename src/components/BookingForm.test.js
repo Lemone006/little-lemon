@@ -64,3 +64,23 @@ test("Guests input is present", () => {
   ).toBeInTheDocument();
 
 });
+
+test("Date input is present", () => {
+
+  render(
+    <BrowserRouter>
+      <BookingForm
+        availableTimes={["17:00"]}
+        dispatch={() => {}}
+      />
+    </BrowserRouter>
+  );
+
+  expect(
+    screen.getByLabelText(
+      "Choose Date"
+    )
+  ).toBeInTheDocument();
+
+});
+

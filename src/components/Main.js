@@ -8,6 +8,7 @@ import MenuPage from "../pages/MenuPage";
 import OrderOnlinePage from "../pages/OrderOnlinePage";
 import LoginPage from "../pages/LoginPage";
 import ConfirmedBooking from "../pages/ConfirmedBooking";
+import NotFoundPage from "../pages/NotFoundPage";
 
 import {
   initializeTimes,
@@ -18,18 +19,21 @@ function Main() {
 
   const [availableTimes, dispatch] = useReducer(
     updateTimes,
-    initializeTimes()
+    [],
+    initializeTimes
   );
 
   return (
     <main>
       <Routes>
 
+        {/* Homepage */}
         <Route
           path="/"
           element={<Homepage />}
         />
-
+        
+        {/* Booking Page */}
         <Route
           path="/reservations"
           element={
@@ -40,29 +44,40 @@ function Main() {
           }
         />
 
+        {/* About Page */}
         <Route
           path="/about"
           element={<AboutPage />}
         />
 
+        {/* Menu Page */}
         <Route
           path="/menu"
           element={<MenuPage />}
         />
 
+        {/* Order Online Page*/}
         <Route
           path="/order-online"
           element={<OrderOnlinePage />}
         />
 
+        {/* Login Page */}
         <Route
           path="/login"
           element={<LoginPage />}
         />
 
+        {/* Confirmation Page */}
         <Route
           path="/confirmed"
           element={<ConfirmedBooking />}
+        />
+
+        {/* 404 Page */}
+        <Route
+          path="*"
+          element={<NotFoundPage />}
         />
 
       </Routes>

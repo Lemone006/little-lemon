@@ -660,3 +660,47 @@ button {
   text-align: center;
   transition: all 0.3s ease;
 }
+
+/* ========= 404 PAGE ========= */
+
+.not-found-page {
+
+  min-height: 70vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 20px;
+}
+
+.not-found-page h1 {
+
+  font-size: 8rem;
+
+  color: #F4CE14;
+
+  margin-bottom: 10px;
+}
+
+.not-found-page h2 {
+
+  color: #495E57;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 20px;
+}
+
+.not-found-page p {
+
+  max-width: 500px;
+
+  margin: 0 auto 40px;
+
+  font-size: 1.1rem;
+}

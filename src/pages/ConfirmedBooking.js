@@ -6,6 +6,35 @@ function ConfirmedBooking() {
 
   const booking = location.state;
 
+  if (!booking) {
+
+  return (
+
+    <section className="confirmation-page">
+
+      <div className="container">
+
+        <h1>No Reservation Found</h1>
+
+        <p>
+          Please make a reservation first.
+        </p>
+
+        <Link
+          to="/reservations"
+          className="primary-btn"
+        >
+          Make a Reservation
+        </Link>
+
+      </div>
+
+    </section>
+
+  );
+
+}
+
   return (
     <section className="confirmation-page">
 

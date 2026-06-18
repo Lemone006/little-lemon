@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant Reservation App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Little Lemon is a responsive React web application that allows customers to browse restaurant information and reserve tables online. The project was developed as part of the Meta Front-End Developer Capstone.
 
-In the project directory, you can run:
+The application focuses on accessibility, responsiveness, user experience, and modern React development practices.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Responsive homepage
+* Navigation using React Router
+* Table reservation form
+* Dynamic available booking times
+* Form validation using HTML5 and React
+* Booking confirmation page
+* Display of reservation details
+* Custom 404 page
+* Responsive layout
+* Accessible forms and semantic HTML
+* Unit testing with Jest and React Testing Library
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+* React
+* React Router DOM
+* JavaScript (ES6)
+* HTML5
+* CSS3
+* Jest
+* React Testing Library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+src
+│
+├── assets
+├── components
+│   ├── Header.js
+│   ├── Nav.js
+│   ├── Footer.js
+│   └── BookingForm.js
+│
+├── data
+│   ├── specialsData.js
+│   ├── testimonialsData.js
+│
+│
+├── pages
+│   ├── Homepage.js
+│   ├── BookingPage.js
+│   ├── AboutPage.js
+│   ├── MenuPage.js
+│   ├── OrderOnlinePage.js
+│   ├── LoginPage.js
+│   ├── ConfirmedBooking.js
+│   └── NotFoundPage.js
+│
+├── api.js
+├── utils.js
+├── App.js
+├── App.css
+├── App.test.js
+└── index.js
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/Lemone006/little-lemon.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Navigate into the project:
 
-## Learn More
+```bash
+cd little-lemon
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Running the Application
 
-### Analyzing the Bundle Size
+Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+Open:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```text
+http://localhost:3000
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Running Tests
 
-### Deployment
+Run all tests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm test
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Accessibility Features
+
+* Semantic HTML elements
+* Labels associated with form controls
+* Keyboard navigation support
+* Focus indicators
+* Responsive design
+* Meaningful error messages
+
+---
+
+## Testing
+
+Unit tests were implemented for:
+
+* initializeTimes()
+* updateTimes()
+* Booking form rendering
+* Date input rendering
+* Guest input rendering
+* Submit button rendering
+
+---
+
+## Author
+
+Shepherd Mabhena
+
+Meta Front-End Developer Capstone Project
